@@ -2,11 +2,20 @@ package edu.uw.basickotlin
 
 // write a "whenFn" that takes an arg of type "Any" and returns a String
 fun whenFn(arg: Any): String {
-    return ""
+    when (arg) {
+        "Hello" -> return("world")
+        0 -> return("zero")
+        1 -> return("one")
+        2...10 -> return("low number")
+        is Int -> return("a number")
+        else -> return("I don't understand)
+    }
 }
 
 // write an "add" function that takes two Ints, returns an Int, and adds the values
-fun add(lhs: Int, rhs: Int): Int = 0
+fun add(lhs: Int, rhs: Int): Int {
+    return lhs + rhs
+}
 
 // write a "sub" function that takes two Ints, returns an Int, and subtracts the values
 fun sub(lhs: Int, rhs: Int): Int = 0
