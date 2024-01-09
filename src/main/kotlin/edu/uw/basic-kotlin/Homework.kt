@@ -6,9 +6,9 @@ fun whenFn(arg: Any): String {
         "Hello" -> return("world")
         0 -> return("zero")
         1 -> return("one")
-        2...10 -> return("low number")
+        in 2..10 -> return("low number")
         is Int -> return("a number")
-        else -> return("I don't understand)
+        else -> return("I don't understand")
     }
 }
 
@@ -18,11 +18,18 @@ fun add(lhs: Int, rhs: Int): Int {
 }
 
 // write a "sub" function that takes two Ints, returns an Int, and subtracts the values
-fun sub(lhs: Int, rhs: Int): Int = 0
+fun sub(lhs: Int, rhs: Int): Int {
+    return lhs - rhs
+}
 
 // write a "mathOp" function that takes two Ints and a function (that takes two Ints and returns an Int), returns an Int, and applies the passed-in-function to the arguments
-fun mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) = 0
+fun mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int): Int {
+    return op(lhs, rhs)
+}
 
 // write a class "Person" with first name, last name and age
+class Person(firstName: String, lastName: String, age: Int) {
+    constructor()
+}
 
 // write a class "Money"
